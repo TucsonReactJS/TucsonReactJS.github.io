@@ -4,11 +4,55 @@
    Author's custom styles
    ========================================================================== */
 
+/*
+* Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
+*/
+body{
+  font-size:18px;
+}
+
+.italic{
+  font-style:italic;
+}
+
+*{
+ font-variant-ligatures:common-ligatures; 
+}
+
+*,body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+  font-family:"freight-sans-pro", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6, strong{
+  font-weight:500;
+}
+
+.navbar{
+  background-color: #2980B9;
+}
+
+.navbar-brand{
+  text-shadow:none;
+  color:#ECF0F1;
+}
+
+.navbar-brand:hover{
+  color:#b6daf3;
+}
 
 
 
+.jumbotron{
+/*  color:#2C3E50;
+  background-color: #ECF0F1;*/
 
-
+  background-color: #2C3E50;
+  color:#ECF0F1;
+}
+.jumbotron > .container > p > a{
+  color:#b6daf3;
+  font-weight:500;
+}
 
 
 
