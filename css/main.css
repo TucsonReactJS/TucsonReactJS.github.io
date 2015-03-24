@@ -20,11 +20,15 @@ body{
 }
 
 *,body,h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
-  font-family:"freight-sans-pro", sans-serif;
+  font-family:"source sans pro", 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
+}
+
+pre,code{
+  font-family:"source code pro",monospace;
 }
 
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6, strong{
-  font-weight:500;
+  font-weight:600;
 }
 
 .navbar{
