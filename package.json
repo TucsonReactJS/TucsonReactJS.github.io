@@ -1,0 +1,23 @@
+{
+  "name": "TucsonReactJS",
+  "version": "1.0.0",
+  "description": "Tucson ReactJS Meetup Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TucsonReactJS/TucsonReactJS.github.io.git"
+  },
+  "keywords": [
+    "Meetup",
+    "Website"
+  ],
+  "author": "Omer Wazir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TucsonReactJS/TucsonReactJS.github.io/issues"
+  },
+  "homepage": "https://github.com/TucsonReactJS/TucsonReactJS.github.io"
+}
