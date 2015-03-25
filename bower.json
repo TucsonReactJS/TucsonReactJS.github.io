@@ -1,0 +1,29 @@
+{
+  "name": "TucsonReactJS.github.io",
+  "version": "1.0.0",
+  "homepage": "https://github.com/TucsonReactJS/TucsonReactJS.github.io",
+  "authors": [
+    "Omer Wazir <omer.wazir@gmail.com>"
+  ],
+  "description": "Tucson ReactJS Website",
+  "main": "index.html",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "Website"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
