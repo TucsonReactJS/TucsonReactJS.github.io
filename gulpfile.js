@@ -43,17 +43,17 @@ gulp.task('css', function () {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('posts', function () {
-    return  gulp.src('./src/posts/**/*.jade')
+gulp.task('jade', function () {
+    return  gulp.src(['./src/**/*.jade','!./src/layouts/**/*.jade'])
         .pipe($.jade())
-        .pipe(gulp.dest('./posts'))
+        .pipe(gulp.dest('./'))
         .pipe(reload({stream:true}));
 });
 
-gulp.task('build', ['css','posts']);
+gulp.task('build', ['css','jade']);
 
 gulp.task('default', ['clean'], function () {
     gulp.start(['build', 'browser-sync']);
     gulp.watch('**/*.less', ['css']);
-    gulp.watch('**/*.jade', ['posts']);
+    gulp.watch('**/*.jade', ['jade']);
 });
