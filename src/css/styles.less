@@ -1,5 +1,6 @@
 @import "../../bower_components/bootstrap/less/bootstrap.less";
-
+@shade: @brand-dark;
+@offset: @brand-light;
 /*
 * Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
 * Bootstrap Styles need to be adjusted to support the custom styles below
@@ -11,6 +12,13 @@ body{
 
 .jumbotron{
   .container{
+    h1{
+      font-style: normal;
+      font-weight:700;
+      text-shadow:
+      -.010em .010em @offset,
+      -.040em .040em @shade;
+    }
     p{
       a{
         color: lighten(@brand-light, 40%);
