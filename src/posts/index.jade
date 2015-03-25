@@ -1,7 +1,16 @@
+---
+title: 'Tucson ReactJS Blog'
+---
 //- index.jade
 extends ../layouts/posts/layout.jade
 
 block title
-  title Tucson ReactJS Blog
+  title= title
 
 block content
+  ul.list-unstyled.posts-lists
+    each post in posts
+        li
+          a(href= post.path)
+            p= post.title
+            p= post.lead
