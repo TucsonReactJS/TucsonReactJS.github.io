@@ -24,10 +24,8 @@ $ git remote add upstream git@github.com:TucsonReactJS/TucsonReactJS.github.io.g
 
 Now decide if you want your feature or bug fix to go into the master branch
 or a features branch.  As a rule of thumb, bug fixes go into the master branch
-while new features go into the features branch.
-
-The master branch is effectively frozen; patches that change the behavior of the website get rejected. The
-current features branch is set as the default branch on GitHub.
+while new features go into the features branch.  Since this site runs as a Github page, anything in the master
+branch will show up live on the website.
 
 ##### Dependencies
 
