@@ -12,11 +12,11 @@ var getBundleName = function () {
   return version + '.' + name + '.' + 'min';
 };
 
-gulp.task('browser-sync',  [,  function() {
+gulp.task('browser-sync',  ['build'],  function() {
   browserSync({
     server: {
       baseDir: './',
-      directory: true
+      directory: false
     },
     open: false
   });
@@ -50,10 +50,10 @@ gulp.task('posts', function () {
         .pipe(reload({stream:true}));
 });
 
-gulp.task( ['css','posts']);
+gulp.task('build', ['css','posts']);
 
 gulp.task('default', ['clean'], function () {
-    gulp.start([ 'browser-sync']);
+    gulp.start(['build', 'browser-sync']);
     gulp.watch('**/*.less', ['css']);
     gulp.watch('**/*.jade', ['posts']);
 });
