@@ -12,11 +12,11 @@ var getBundleName = function () {
   return version + '.' + name + '.' + 'min';
 };
 
-gulp.task('browser-sync',  ['build'],  function() {
+gulp.task('browser-sync',  [,  function() {
   browserSync({
     server: {
       baseDir: './',
-      directory: false
+      directory: true
     },
     open: false
   });
@@ -28,7 +28,7 @@ function handleError(err) {
 }
 
 gulp.task('clean', function(cb) {
-  del(['css'], cb);
+  del(['css','posts'], cb);
 });
  
 gulp.task('css', function () {
@@ -43,9 +43,17 @@ gulp.task('css', function () {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('build', ['css']);
+gulp.task('posts', function () {
+    return  gulp.src('./src/posts/**/*.jade')
+        .pipe($.jade())
+        .pipe(gulp.dest('./posts'))
+        .pipe(reload({stream:true}));
+});
+
+gulp.task( ['css','posts']);
 
 gulp.task('default', ['clean'], function () {
-    gulp.start(['build', 'browser-sync']);
-    gulp.watch('src/**/*.less', ['css']);
+    gulp.start([ 'browser-sync']);
+    gulp.watch('**/*.less', ['css']);
+    gulp.watch('**/*.jade', ['posts']);
 });
