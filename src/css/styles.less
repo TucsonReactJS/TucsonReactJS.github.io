@@ -80,17 +80,17 @@ body{
  * Blog name and description
  */
 
-.post-header {
+.blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.post-title {
+.blog-title {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: @font-size-h1;
   font-weight: 700;
 }
-.post-description {
+.blog-description {
   font-size: 20px;
   color: @brand-dark;
 }
@@ -99,11 +99,14 @@ body{
   padding: 15px;
   margin: 0 -15px 15px;
 }
-.sidebar-module-inset {
-  padding: 15px;
-  background-color: @brand-dark;
-  color:@brand-white;
-  border-radius: 4px;
+.sidebar-module-avatar {
+    padding: 15px;
+    background-color: @brand-dark;
+    color:@brand-white;
+    border-radius: 50%;
+    max-width: 80%;
+    display:block;
+    margin:0 auto;
 }
 .sidebar-module-inset p:last-child,
 .sidebar-module-inset ul:last-child,

@@ -4,14 +4,18 @@ html
     include ../includes/head.jade
     body
       include ../includes/navbar.jade
+      .jumbotron
+        .container
+          h1 The Tucson ReactJS Archive
+          p.h2 
+            | A collection of articles and slides for meetups
       div(class="container")
-        div(class="post-header")
-          h1(class="post-title") The Tucson ReactJS Blog
-          p(class="lead post-description") A collection of notes, slides and guides from meetups
-          div(class="row")
+        //- div(class="blog-header")
+        //-   h1(class="blog-title") The Tucson ReactJS Archive
+        //-   p(class="lead blog-description") A collection of articles and slides for meetups
+        div(class="row")
             div(class="col-sm-8")
               block content
             div(class="col-sm-3 col-sm-offset-1 sidebar")
-              div(class="sidebar-module sidebar-module-inset")
-                h4 About
-                p Engine boy render-farm tower order-flow refrigerator sub-orbital concrete corporation construct free-market Legba industrial grade man.
+              //-div(class="sidebar-module sidebar-module-inset")
+              img.sidebar-module-avatar(src="/img/ReactCactus.svg")

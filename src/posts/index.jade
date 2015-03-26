@@ -11,6 +11,6 @@ block content
   ul.list-unstyled.posts-lists
     each post in posts
         li
-          a(href= post.path)
-            p= post.title
-            p= post.lead
+          a.archived-post(href= post.path)
+            p.post-title= post.title
+            p.post-lead= post.lead
