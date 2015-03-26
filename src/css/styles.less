@@ -5,6 +5,10 @@
 * Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
 * Bootstrap Styles need to be adjusted to support the custom styles below
 */
+*{
+ font-variant-ligatures:common-ligatures; 
+}
+
 body{
   font-size:18px;
   padding: 50px 0px 70px 0px;
@@ -23,18 +27,6 @@ body{
     p{
       font-size: @font-size-h2;
       line-height: 1.4;
-      // a, .rsvp-link{
-      //   color: #c3c3d1; //web-safe for accessibility
-      //   background-color: @brand-dark;
-      //   padding:10px 12px;
-      //   border-radius:3px;
-      //   text-decoration: none;
-      //   transition: all 0.2s ease;
-      //   &:hover{
-      //   color: @brand-dark; //web-safe for accessibility
-      //   background-color: #c3c3d1;
-      //   }
-      // }
     }
   }
 }
@@ -52,10 +44,38 @@ body{
         text-decoration: none;
         }
 }
-*{
- font-variant-ligatures:common-ligatures; 
+
+@media (max-width: @screen-md-max) {
+  .jumbotron{
+    .container{
+      p{
+        font-size: @font-size-h3;
+      }
+    }
+}
+  .obvious-link{
+    padding:2px 5px;
+  }
 }
 
+@media (max-width: @screen-sm-max) {
+  .jumbotron{
+    .container{
+      p{
+        font-size: @font-size-h3;
+      }
+    }
+  }
+    .obvious-link {
+      padding:2px 3px;
+    }
+}
+
+.navbar-avatar{
+  float:left;
+  max-width: 50px;
+  margin-right:10px;
+}
 /*
  * Blog name and description
  */
