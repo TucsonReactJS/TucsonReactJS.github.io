@@ -23,7 +23,6 @@ gulp.task('browser-sync',  ['build'],  function() {
       baseDir: './',
       directory: false
     },
-    files:['**/*.html','**/*.css'],
     open: false,
     notify: false
   });
@@ -50,8 +49,8 @@ gulp.task('css', function () {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('posts', function(){
-    return gulp.src(['./src/posts/**/_*.jade'])
+gulp.task('posts', function(done){
+    let stream = gulp.src(['./src/posts/**/_*.jade'])
     .pipe($.data(function(file) {
       let content = frontMatter(String(file.contents));
       file.contents = new Buffer(content.body);
@@ -61,13 +60,28 @@ gulp.task('posts', function(){
     }))
     .pipe($.jade())
     .pipe(gulp.dest('./posts'));
+
+    stream.on('end', function(){
+        // pagesAttributes.posts = _.uniq(pagesAttributes.posts, function(post){
+        //   return post.path;
+        // });
+      console.log(`start: ${JSON.stringify(pagesAttributes.posts)}`);
+      pagesAttributes.posts = _.chain(pagesAttributes.posts)
+      .uniq(function(post){
+        return post.path;
+      })
+      .sortBy('date');
+      console.log(`end: ${JSON.stringify(pagesAttributes.posts)}`);
+
+      done();
+    });
+
+    stream.on('error', function(err){
+      done(err);
+    });
 })
 
 gulp.task('jade',['posts'], function () {
-  pagesAttributes.posts = _.uniq(pagesAttributes.posts, function(post){
-    return post.path;
-  });
-
   return gulp.src(['./src/**/*.jade','!./src/layouts/**/*.jade','!./src/posts/**/_*.jade'])
     .pipe($.data(function(file) {
       let content = frontMatter(String(file.contents));
