@@ -95,6 +95,27 @@ body{
   color: @brand-dark;
 }
 
+.archived-post{
+  display:block;
+  border-radius: 2px;
+  padding:10px 15px;
+  margin-bottom: 1em;
+  &:hover{
+    text-decoration: none;
+    color:@brand-dark;
+    background-color: darken(@brand-white,5%)
+  }
+}
+
+.post-title{
+  font-size: @font-size-h2;
+}
+
+.post-lead{
+  font-size: @font-size-h3;
+  font-style:italic;
+}
+
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
