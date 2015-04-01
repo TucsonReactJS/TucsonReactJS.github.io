@@ -52,27 +52,34 @@ gulp.task('css', function () {
 gulp.task('posts', function(done){
     let stream = gulp.src(['./src/posts/**/_*.jade'])
     .pipe($.data(function(file) {
+      
       let content = frontMatter(String(file.contents));
+      
       file.contents = new Buffer(content.body);
+      
       content.attributes.path = file.relative.split('.jade').join('.html');
-      pagesAttributes.posts.push(content.attributes);
+      
+      let postIndex = _.findIndex(pagesAttributes.posts, function(post){
+        return post.title === content.attributes.title;
+      });
+      console.log(postIndex);
+      if(postIndex > -1) {
+        pagesAttributes.posts[postIndex] = content.attributes;
+      }  else {
+        pagesAttributes.posts.push(content.attributes);
+      }
+
       return content.attributes;
+
     }))
     .pipe($.jade())
     .pipe(gulp.dest('./posts'));
 
     stream.on('end', function(){
-        // pagesAttributes.posts = _.uniq(pagesAttributes.posts, function(post){
-        //   return post.path;
-        // });
-      console.log(`start: ${JSON.stringify(pagesAttributes.posts)}`);
-      pagesAttributes.posts = _.chain(pagesAttributes.posts)
-      .uniq(function(post){
-        return post.path;
-      })
-      .sortBy('date');
-      console.log(`end: ${JSON.stringify(pagesAttributes.posts)}`);
-
+      pagesAttributes.posts =  _.sortBy(pagesAttributes.posts, function(post){
+        return -(new Date(post.date));
+      });
+      console.log(pagesAttributes);
       done();
     });
 
