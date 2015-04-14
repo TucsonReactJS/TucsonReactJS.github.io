@@ -62,7 +62,6 @@ gulp.task('posts', function(done){
       let postIndex = _.findIndex(pagesAttributes.posts, function(post){
         return post.title === content.attributes.title;
       });
-      console.log(postIndex);
       if(postIndex > -1) {
         pagesAttributes.posts[postIndex] = content.attributes;
       }  else {
@@ -79,7 +78,6 @@ gulp.task('posts', function(done){
       pagesAttributes.posts =  _.sortBy(pagesAttributes.posts, function(post){
         return -(new Date(post.date));
       });
-      console.log(pagesAttributes);
       done();
     });
 
