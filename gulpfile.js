@@ -51,6 +51,9 @@ gulp.task('css', function () {
 
 gulp.task('posts', function(done){
     let stream = gulp.src(['./src/posts/**/_*.jade'])
+    .pipe($.rename(function(path){
+      path.basename = path.basename.slice(1);
+    }))
     .pipe($.data(function(file) {
       
       let content = frontMatter(String(file.contents));
