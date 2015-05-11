@@ -1,0 +1,25 @@
+---
+title: 'Testing React applications'
+lead: 'Links to slides and code for the meetup held on May 7th 2015'
+author: '@thewazir'
+github: 'https://github.com/thewazir'
+date: 'May 11 2015'
+---
+extends ../layouts/posts/layout.jade
+block title
+    title #{title}
+block content
+    include ../layouts/includes/postHeader.jade
+    p
+        | Our second meetup was organized by Omer Wazir
+        a(href="https://github.com/bringking")  @thewazir
+        |  and he covered Unit testing strategies for React applications.
+        | You can find slides
+        a(href="#slides")[1]
+        |  and accompanying code examples
+        a(href="#code")[2]
+        |  in the links below.
+    br/
+    a(href="http://tucsonreactjs.github.io/testingReactApplications/#/" id="slides") [1] Link to slides.
+    br/
+    a(href="https://github.com/TucsonReactJS/primer" id="code") [2] Link to code examples.
