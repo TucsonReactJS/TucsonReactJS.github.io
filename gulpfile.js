@@ -34,7 +34,7 @@ function handleError(err) {
 }
 
 gulp.task('clean', function(cb) {
-  del(['css','posts','js'], cb);
+  del(['css','posts','js','contact'], cb);
 });
  
 gulp.task('css', function () {

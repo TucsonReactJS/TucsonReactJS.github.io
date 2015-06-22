@@ -19,10 +19,23 @@
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+/* OLD COLORS
+@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
 
-@brand-light: #32345C;//#254064;
+@purple: #32345C;//#254064;
 @brand-white: #D7DADB;
-@brand-dark: #242642;//#1C304A;
+@dark-purple: #242642;//#1C304A;
+*/
+
+@purple: #6D3551;//#254064;
+@brand-white: #D7DADB;
+@dark-purple: #27242F;//#1C304A;
+@yellow: #E2C336;
+@red: #A03534;
  
 
 //== Scaffolding
@@ -35,7 +48,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            lighten(@brand-light,10%);
+@link-color:            lighten(@purple,10%);
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -46,7 +59,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "museo-sans","Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "parisine-std","Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -69,9 +82,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    'museo', @font-family-sans-serif;
-//'adelle',@font-family-serif;
-@headings-font-weight:    500;
+@headings-font-family:    "parisine-plus-std-gris", @font-family-sans-serif;
+@headings-font-weight:    700;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -383,15 +395,15 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           @brand-light;
+@navbar-default-toggle-hover-bg:           @purple;
 @navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       @brand-light;
+@navbar-default-toggle-border-color:       @purple;
 
 
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         @brand-dark;
+@navbar-inverse-bg:                         @dark-purple;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
@@ -409,10 +421,10 @@
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            @brand-light;
+@navbar-inverse-toggle-hover-bg:            @purple;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        darken(@brand-light, 5%);
-@navbar-inverse-toggle-background-color:    @brand-light;
+@navbar-inverse-toggle-border-color:        darken(@purple, 5%);
+@navbar-inverse-toggle-background-color:    @purple;
 
 //== Navs
 //
@@ -486,7 +498,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                @brand-white;
-@jumbotron-bg:                   @brand-light;
+@jumbotron-bg:                   @purple;
 @jumbotron-heading-color:        @brand-white;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
