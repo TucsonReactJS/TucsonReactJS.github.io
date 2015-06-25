@@ -4,29 +4,21 @@ html(lang="en")
       include ./layouts/includes/navbar.jade
       .jumbotron
         .container
-          h1 Welcome!
-          p.h2 
-            | The Tucson ReactJS group is a meetup for people who want to deep-dive into React and the Flux application
-            | architecture. React beginners and experts are both welcome, and so is anyone who loves and wants to talk
-            | about JavaScript.
-          p Transparency rocks, so everything we do will be posted on our 
-            a.obvious-link(href='https://github.com/TucsonReactJS') Github page
-      .jumbotron
-        .container#upcoming 
-          header
-            h1 Upcoming Meetup
-            h2 ReactJS and Immutability, a perfect match? 
-              p
-                | Join us on the 29th of June where our very own Jordan Danford is going to talk about marrying your ReactJS code with immutable data structures.
-            h2 Where?
-              p Tucson ReactJS meetups use the great downtown warehouse space provided by Elegant Thought, LLC.
-                | Drinks and light snacks will be provided by the organizers!
-            address 
-              strong Elegant Thought
-              br/
-              | 15 E Toole Ave
-              br/
-              | Tucson, AZ 85701 
-            a.obvious-link(href="http://www.meetup.com/Tucson-ReactJS-Meetup/events/221932862/") RSVP on Meetup.com
+          h1.text-center Tucson ReactJS
+          p.h2.text-center 
+            | A meetup for people who want to deep-dive into the React ecosystem.
+      .container
+        .row
+          .col-sm-8
+            include ./upcoming/nextMeetup.jade
+          .col-sm-3.col-sm-offset-1.sidebar
+            include  ./layouts/includes/sidebar.jade
+      //- .jumbotron
+      //-   .container
+      //-     header
+      //-       h1 Previous Meetups
+      //-       h2 ReactJS Primer &amp; Component Lifecycle? 
+      //-     p.h2 
+      //-       | Deep dive into ReactJS and the ReactJS Component Lifecycle by building a React component from scratch using idiomatic  tools and practices.
       include ./layouts/includes/scripts.jade
         

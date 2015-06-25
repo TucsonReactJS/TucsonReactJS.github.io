@@ -17,25 +17,23 @@ body{
 }
 
 .jumbotron{
+  background-color: inherit;
+  border-bottom: 8px solid @purple;
+  color:@dark-purple;
   .container{
     h1{
-      font-style: normal;
-      font-weight:700;
-      text-shadow:
-      -.010em .010em @offset,
-      -.040em .040em @shade;
+      color:@purple;
     }
     p{
-      font-size: @font-size-h2;
+      font-size: @font-size-h3;
       line-height: 1.4;
-      font-family: @font-family-sans-serif;
     }
   }
 }
 
 
 body.white{
-  background-color: darken(@yellow, 2%);
+  background-color: #fefefe;
   .jumbotron{
     background-color: inherit;
     color:@dark-purple;
@@ -50,21 +48,6 @@ body.white{
     color:@red;
     font-weight: 700;
   }
-  }
-}
-
-.jumbotron:nth-of-type(even){
-  color:@dark-purple;
-  background-color: #fefefe;
-    .container{
-    h1{
-      font-style: normal;
-      font-weight:700;
-      color:@dark-purple;
-      text-shadow:
-      -.010em .010em #fefefe,
-      -.040em .040em lighten(@dark-purple, 75%);
-    }
   }
 }
 
