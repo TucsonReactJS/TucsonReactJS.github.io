@@ -1,6 +1,10 @@
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 @shade: @dark-purple;
 @offset: @purple;
+@text-inner: lighten(@purple, 40%);
+@text-shadow: @gray-lighter;
+
+@purple: darken(#00D8FF, 15%);
 /*
 * Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
 * Bootstrap Styles need to be adjusted to support the custom styles below
@@ -23,6 +27,19 @@ body{
   .container{
     h1{
       color:@purple;
+      b{
+        display: block;
+      }
+      b:nth-child(1){
+        font-size:104px;
+        font-weight:400; 
+      }
+      b:nth-child(2){
+        text-transform: uppercase;
+        color:lighten(@purple, 2%);
+        font-size:2.5em;
+        letter-spacing: 0.08em; 
+      }
     }
     p{
       font-size: @font-size-h3;
@@ -46,8 +63,7 @@ body.white{
 
     a{
     color:@red;
-    font-weight: 700;
-  }
+   }
   }
 }
 
@@ -153,9 +169,84 @@ body.white{
   margin-bottom: 0;
 }
 
+.sidebar{
+  padding-top: 50px;
+}
 
+#upcoming{
+  padding:50px 0px 60px 0px;
+  border-bottom: 2px solid @purple;
+}
 
+.pop-shadow{
+text-shadow:
+    -.005em .010em @text-inner,
+    -.010em .005em @text-inner,
+    -.010em .015em @text-inner,
+    -.015em .010em @text-inner,
+    -.015em .020em @text-inner,
+    -.020em .015em @text-inner,
+    -.020em .025em @text-inner,
+    -.025em .020em @text-inner,
+    -.025em .030em @text-inner,
+    -.030em .025em @text-inner,
+    -.030em .035em @text-inner,
+    -.035em .030em @text-inner,
+    -.035em .040em @text-inner,
+    -.040em .035em @text-inner,
+    -.040em .045em @text-inner,
+    -.045em .040em @text-inner,
+    -.045em .050em @text-inner,
+    -.050em .045em @text-inner,
+    -.050em .055em @text-inner,
+    -.055em .050em @text-inner,
+    -.055em .060em @text-inner,
+    -.060em .055em @text-inner,
+    -.060em .065em @text-inner,
+    -.065em .060em @text-inner,
+    -.065em .070em @text-inner,
+    -.060em .065em @text-shadow,
+    -.060em .075em @text-shadow,
+    -.055em .070em @text-shadow,
+    -.055em .080em @text-shadow,
+    -.050em .075em @text-shadow,
+    -.050em .085em @text-shadow,
+    -.045em .080em @text-shadow,
+    -.045em .090em @text-shadow,
+    -.040em .085em @text-shadow,
+    -.040em .095em @text-shadow,
+    -.035em .090em @text-shadow,
+    -.035em .100em @text-shadow,
+    -.030em .095em @text-shadow,
+    -.030em .105em @text-shadow,
+    -.025em .100em @text-shadow,
+    -.025em .110em @text-shadow,
+    -.020em .105em @text-shadow,
+    -.020em .115em @text-shadow,
+    -.015em .110em @text-shadow,
+    -.015em .120em @text-shadow,
+    -.010em .115em @text-shadow,
+    -.010em .125em @text-shadow,
+    -.005em .120em @text-shadow,
+    -.005em .130em @text-shadow,
+    .000em .125em @text-shadow,
+    .000em .135em @text-shadow,
+    .005em .130em @text-shadow,
+    .005em .140em @text-shadow,
+    .010em .135em @text-shadow,
+    .010em .145em @text-shadow,
+    .015em .140em @text-shadow,
+    .015em .150em @text-shadow,
+    .020em .145em @text-shadow,
+    .020em .155em @text-shadow,
+    .025em .150em @text-shadow,
+    .025em .160em @text-shadow,
+    .030em .155em @text-shadow,
+    .030em .165em @text-shadow,
+    .035em .160em @text-shadow,
+    .035em .170em @text-shadow;
 
+}
 
 
 

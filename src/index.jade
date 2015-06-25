@@ -4,13 +4,17 @@ html(lang="en")
       include ./layouts/includes/navbar.jade
       .jumbotron
         .container
-          h1.text-center Tucson ReactJS
+          h1
+            b.text-center Tucson
+            b.text-center React
           p.h2.text-center 
             | A meetup for people who want to deep-dive into the React ecosystem.
-      .container
+      .container.main-content
         .row
           .col-sm-8
             include ./upcoming/nextMeetup.jade
+            .row
+              include ./previous/previousMeetups.jade
           .col-sm-3.col-sm-offset-1.sidebar
             include  ./layouts/includes/sidebar.jade
       //- .jumbotron
