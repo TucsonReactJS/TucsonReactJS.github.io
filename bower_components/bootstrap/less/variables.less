@@ -26,12 +26,12 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-@purple: #32345C;//#254064;
+@dark-teal: #32345C;//#254064;
 @brand-white: #D7DADB;
-@dark-purple: #242642;//#1C304A;
+@dark-dark-teal: #242642;//#1C304A;
 */
 
-@purple: #6D3551;//#254064;
+@dark-teal: darken(#00D8FF, 25%);//#254064;
 @brand-white: #D7DADB;
 @dark-purple: #27242F;//#1C304A;
 @yellow: #E2C336;
@@ -48,7 +48,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            lighten(@purple,10%);
+@link-color:            lighten(@dark-teal,20%);
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -395,15 +395,15 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           @purple;
+@navbar-default-toggle-hover-bg:           @dark-teal;
 @navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       @purple;
+@navbar-default-toggle-border-color:       @dark-teal;
 
 
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         @dark-purple;
+@navbar-inverse-bg:                         @dark-teal;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
@@ -421,10 +421,10 @@
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            @purple;
+@navbar-inverse-toggle-hover-bg:            @dark-teal;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        darken(@purple, 5%);
-@navbar-inverse-toggle-background-color:    @purple;
+@navbar-inverse-toggle-border-color:        darken(@dark-teal, 5%);
+@navbar-inverse-toggle-background-color:    @dark-teal;
 
 //== Navs
 //
@@ -498,7 +498,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                @brand-white;
-@jumbotron-bg:                   @purple;
+@jumbotron-bg:                   @dark-teal;
 @jumbotron-heading-color:        @brand-white;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 

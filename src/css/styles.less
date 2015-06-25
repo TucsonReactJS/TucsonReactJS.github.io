@@ -9,6 +9,7 @@
 * Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
 * Bootstrap Styles need to be adjusted to support the custom styles below
 */
+
 *{
  font-variant-ligatures:common-ligatures; 
 }
@@ -46,39 +47,6 @@ body{
       line-height: 1.4;
     }
   }
-}
-
-
-body.white{
-  background-color: #fefefe;
-  .jumbotron{
-    background-color: inherit;
-    color:@dark-purple;
-    .container{
-      h1{
-        color:@dark-purple;
-        text-shadow:none;
-      }
-    }
-
-    a{
-    color:@red;
-   }
-  }
-}
-
-.obvious-link{
-        color: #c3c3d1; //web-safe for accessibility
-        background-color: @dark-purple;
-        padding:10px 12px;
-        border-radius:3px;
-        text-decoration: none;
-        transition: all 0.2s ease;
-        &:hover{
-        color: @dark-purple; //web-safe for accessibility
-        background-color: #c3c3d1;
-        text-decoration: none;
-        }
 }
 
 @media (max-width: @screen-md-max) {
@@ -136,10 +104,11 @@ body.white{
   border-radius: 2px;
   padding:10px 15px;
   margin-bottom: 1em;
+  transition:all 0.2s ease-in;
   &:hover{
     text-decoration: none;
     color:@dark-purple;
-    background-color: darken(@brand-white,5%)
+    background-color: lighten(@brand-white,5%)
   }
 }
 
