@@ -5,16 +5,23 @@
 
 //== Colors
 //
+
+@brand-white: #D7DADB;
+@dark-purple: #27242F;//#1C304A;
+@yellow: #E2C336;
+@red: #A03534;
+@teal:darken(#00D8FF, 10%);
+
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
-@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray-dark:              #444;//    lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         lighten(@dark-purple, 18.5%); // #337ab7
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -26,16 +33,13 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
-@dark-teal: #32345C;//#254064;
+@brand-primary: #32345C;//#254064;
 @brand-white: #D7DADB;
-@dark-dark-teal: #242642;//#1C304A;
+@dark-brand-color: #242642;//#1C304A;
 */
 
-@dark-teal: darken(#00D8FF, 25%);//#254064;
-@brand-white: #D7DADB;
-@dark-purple: #27242F;//#1C304A;
-@yellow: #E2C336;
-@red: #A03534;
+//@dark-teal: darken(#00D8FF, 25%);//#254064;
+
  
 
 //== Scaffolding
@@ -48,7 +52,7 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            lighten(@dark-teal,20%);
+@link-color:            @teal;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
@@ -395,15 +399,15 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           @dark-teal;
+@navbar-default-toggle-hover-bg:           @brand-primary;
 @navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       @dark-teal;
+@navbar-default-toggle-border-color:       @brand-primary;
 
 
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         @dark-teal;
+@navbar-inverse-bg:                         @brand-primary;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
@@ -421,10 +425,10 @@
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            @dark-teal;
+@navbar-inverse-toggle-hover-bg:            @brand-primary;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        darken(@dark-teal, 5%);
-@navbar-inverse-toggle-background-color:    @dark-teal;
+@navbar-inverse-toggle-border-color:        darken(@brand-primary, 5%);
+@navbar-inverse-toggle-background-color:    @brand-primary;
 
 //== Navs
 //
@@ -498,7 +502,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                @brand-white;
-@jumbotron-bg:                   @dark-teal;
+@jumbotron-bg:                   @brand-primary;
 @jumbotron-heading-color:        @brand-white;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 

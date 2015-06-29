@@ -1,10 +1,9 @@
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 @shade: @dark-purple;
-@offset: @purple;
-@text-inner: lighten(@purple, 40%);
+@offset: @brand-primary;
+@text-inner: lighten(@brand-primary, 40%);
 @text-shadow: @gray-lighter;
 
-@purple: darken(#00D8FF, 15%);
 /*
 * Colors from https://color.adobe.com/Flat-UI-color-theme-2469224/
 * Bootstrap Styles need to be adjusted to support the custom styles below
@@ -23,22 +22,24 @@ body{
 
 .jumbotron{
   background-color: inherit;
-  border-bottom: 8px solid @purple;
+  border-bottom: 8px solid @brand-primary;
   color:@dark-purple;
   .container{
     h1{
-      color:@purple;
+      color: lighten(@brand-primary, 12%);
       b{
         display: block;
       }
       b:nth-child(1){
-        font-size:104px;
-        font-weight:400; 
+        font-size:1em;
+        font-weight:300; 
       }
       b:nth-child(2){
         text-transform: uppercase;
-        color:lighten(@purple, 2%);
-        font-size:2.5em;
+        color:@brand-primary;
+        font-weight:700;
+        // color:lighten(@brand-primary, 12%);
+        font-size:1.75em;
         letter-spacing: 0.08em; 
       }
     }
@@ -105,9 +106,10 @@ body{
   padding:10px 15px;
   margin-bottom: 1em;
   transition:all 0.2s ease-in;
+  color:@dark-purple;
   &:hover{
     text-decoration: none;
-    color:@dark-purple;
+    color:lighten(@dark-purple, 20%);
     background-color: lighten(@brand-white,5%)
   }
 }
@@ -144,7 +146,7 @@ body{
 
 #upcoming{
   padding:50px 0px 60px 0px;
-  border-bottom: 2px solid @purple;
+  border-bottom: 2px solid @brand-primary;
 }
 
 .pop-shadow{
